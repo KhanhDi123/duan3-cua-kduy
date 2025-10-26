@@ -1,5 +1,8 @@
 /* PC */
 @media (min-width: 992px) {
+    .mobile-header{
+        display:none
+    }
 }
 
 /* Tablet & mobile */
@@ -45,7 +48,49 @@
     opacity:1;
     visibility:visible;
   }
+
+  /* 6. Code cho menu drawer */
+  .menu-drawer{
+    position: fixed;
+    background-color:#2e1919;
+    inset:0 40% 0 0;
+    z-index:2;
+    transform:translateX(-100%);
+    transition:0.3s;
+    padding:60px
+  }
+
+  /* 7. Ktra nếu checkbox dc check hiện menu */
+  .menu-checkbox:checked ~ .menu-drawer{
+    transform:translateX(0)
+  }
+
+  /* 9. menu top */
+  .close__menu{
+    width:24px;
+    color:#fff
+  }
+
+  .menu-drawer__top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+  }
+
+  #navbar__list--mobile{
+    margin-top:25px
+  }
+
+  .navbar__link{
+    display:block;
+    font-size:2rem
+  }
+
+  .navbar__link:hover{
+    background-color:#00ffff37
+  }
 }
+
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
